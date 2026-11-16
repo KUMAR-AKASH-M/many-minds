@@ -1,0 +1,33 @@
+{
+    "num_ctx": 8192,
+    "ollama_url": "http://localhost:11434",
+    "roles": {
+        "coder": {
+            "model": "qwen2.5-coder:7b",
+            "system": "You are a Python coder. Output ONLY the complete working code in one ```python block, no explanation outside it.",
+            "temperature": 0.2,
+            "tools": [
+                "chat",
+                "files",
+                "shell"
+            ]
+        },
+        "planner": {
+            "model": "qwen3:8b",
+            "system": "You are a planner in a small-model agent team. Break tasks into short, concrete steps. Answer questions directly and briefly. No code unless asked.",
+            "temperature": 0.3,
+            "tools": [
+                "chat"
+            ]
+        },
+        "reviewer": {
+            "model": "qwen3:4b",
+            "system": "You are a code reviewer. List only real bugs or missing edge cases, each with the exact fix. If the code is fine, say exactly: OK",
+            "temperature": 0.2,
+            "tools": [
+                "chat"
+            ]
+        }
+    },
+    "version": 1
+}

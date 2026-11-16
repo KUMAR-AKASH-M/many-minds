@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.many-minds/
+.DS_Store
+Thumbs.db
